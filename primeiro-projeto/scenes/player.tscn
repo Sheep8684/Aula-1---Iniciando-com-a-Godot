@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://blb4wiemsk12y"]
+
+[ext_resource type="Script" uid="uid://bl1atswyhbjvh" path="res://player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://dayoeftnwj23r" path="res://assets/kenney_platformer-art-deluxe/Base pack/Player/p2_stand.png" id="2_qhqgy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
+radius = 25.0
+height = 92.0
+
+[node name="player" type="CharacterBody2D" unique_id=248414386]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=864124623]
+texture = ExtResource("2_qhqgy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1649867866]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2032051028]
+shape = SubResource("CapsuleShape2D_dqkch")
